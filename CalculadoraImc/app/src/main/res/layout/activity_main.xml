@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:id="@+id/appBarLayout">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@android:drawable/ic_dialog_email"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/titulo"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="34sp" android:textColor="#7D01EB" android:layout_marginTop="100dp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/resultadoCalculo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultadoCalculo"
+                android:textSize="34sp"
+                android:visibility="invisible"
+                android:layout_marginTop="250dp"
+                tools:ignore="NotSibling" app:layout_constraintBottom_toBottomOf="@+id/titulo"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/resultadoClassificacao"
+                android:visibility="invisible" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultadoClassificacao"
+                android:textSize="34sp"
+                android:layout_marginTop="250dp"
+                tools:ignore="NotSibling" app:layout_constraintBottom_toBottomOf="@+id/resultadoCalculo"/>
+
+        <TextView
+                android:text="@string/altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/altura"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="25sp" android:textColor="#7D01EB" android:layout_marginTop="300dp"
+        />
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/inputAltura"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/altura"
+                android:textSize="24sp"/>
+        <TextView
+                android:text="@string/peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/peso"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="25sp" android:textColor="#7D01EB" android:layout_marginTop="424dp"
+                app:layout_constraintHorizontal_bias="0.488"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/inputPeso"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/peso" android:textSize="24sp"/>
+
+        <Button
+                android:text="@string/calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/botaoConverter"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="24sp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="100dp"/>
+        <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="52dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
